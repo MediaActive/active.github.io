@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Webte+</h1>
+            <p>Convert videos to MP3, find movies, or download videos easily!</p>
+        </header>
+        <nav class="tabs">
+            <button class="tab-button" onclick="showTab('converter')">Music</button>
+            <button class="tab-button" onclick="showTab('video-downloader')">Video</button>
+            <button class="tab-button" onclick="showTab('movie-finder')">Movies</button>
+            
+        </nav>
+        <main>
+            <!-- YouTube to MP3 Converter Section -->
+            <section id="converter" class="tab-content active">
+                <h2>MP3 Downloader</h2>
+                <form id="converter-form">
+                    <input type="url" id="video-url" name="video-url" placeholder="Enter YouTube video URL" required>
+                    <button type="submit" class="btn-primary">Convert to MP3</button>
+                </form>
+            </section>
+
+            <!-- Film Finder Section -->
+            <section id="movie-finder" class="tab-content">
+                <h2>Filimler</h2>
+                <form id="search-form">
+                    <input type="text" id="movie-search" name="movie-search" placeholder="Search for a movie..." required>
+                    <button type="submit" class="btn-primary">Search</button>
+                </form>
+                <div id="results">
+                    <!-- Film results will appear here -->
+                </div>
+            </section>
+
+            <!-- Video Downloader Section -->
+            <section id="video-downloader" class="tab-content">
+                <h2>Video Downloader</h2>
+                <form id="video-downloader-form">
+                    <input type="url" id="video-download-url" name="video-download-url" placeholder="Enter video URL" required>
+                    <button type="submit" class="btn-primary">Download Video</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>MediaActive Ekibi</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
